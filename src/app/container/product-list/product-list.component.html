@@ -15,6 +15,7 @@
           <div class="ekart--product--name">{{prod.name}}</div>
           <div class="ekart--product--category">{{prod.gender}} . {{prod.category}} . {{prod.brand}}</div>
           <div class="ekart--product--available-colors">{{prod.color.length}} Colors . Best Seller</div>
+          <!-- ngStyle attribute directive is used to dynamic change the css property -->
           <div class="ekart--product--in--stock" [ngStyle]="{fontWeight: 'bold',color: 'white',textAlign: 'center',padding: '10px', background: prod.is_in_inventory ? 'green' : 'red'}">
             {{ prod.is_in_inventory ? 'Available' : 'Not available in stock' }}
           </div>
