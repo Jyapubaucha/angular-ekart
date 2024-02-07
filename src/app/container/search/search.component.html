@@ -4,7 +4,7 @@
     <!-- ngClass attribute directive is used to disable the search button 
      of the search text is empty. if search box has some text the button 
     dynamically change to active search button-->
-    <button class="btn btn-search" (click)="updateSearchText(searchInput)">Search</button>
+    <button class="btn btn-search" (click)="updateSearchText()">Search</button>
 </div>
 <div class="ekart-search-result-for">
     <p *ngIf="searchText != ''">
