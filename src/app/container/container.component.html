@@ -26,6 +26,29 @@
     </div> -->
 
     <product-list [searchText]="searchText" #productListComponent></product-list>
-    <product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></product-detail>
+    <product-detail *ngIf="productListComponent.selectedProduct" 
+        [productListComp]="productListComponent">
+    </product-detail>
 
+    <div class="ekart-featured-products">
+        <div class="ekart-featured-product-heading">
+            <h1>Latest Arrival in Popular Brands</h1>
+        </div>
+
+        <featured-brands>
+            <h3 class="title">New arrivals in Nike.</h3>
+            <button class="call-to-action"> Show more product in Nike</button>
+        </featured-brands>
+        
+        <featured-brands>
+            <h3 class="title">New arrivals in Adidas.</h3>
+            <button class="call-to-action"> Show more product in Adidas</button>
+
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New arrivals in Reebok.</h3>
+            <button class="call-to-action"> Show more product in Reebok</button>
+        </featured-brands>
+
+    </div>
 </div>
