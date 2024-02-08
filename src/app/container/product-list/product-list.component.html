@@ -30,9 +30,12 @@
     <!-- </div> --> 
 
           <!-- [product] is an attribute from product component ts -->
-    <div *ngFor="let prod of products" (click)="selectedProduct = prod">
-      <!-- *ngIf="selectedFilterRadioButton === 'all' || prod.is_in_inventory.toString() === selectedFilterRadioButton" -->
-      <product [product]="prod" *ngIf="searchText === '' ||  prod.name.toLowerCase().includes(searchText)">
-      </product>
-    </div>
+    <ng-container *ngFor="let prod of products">
+        <!-- *ngIf="selectedFilterRadioButton === 'all' || prod.is_in_inventory.toString() === selectedFilterRadioButton" -->
+        <product 
+          [product]="prod" 
+          *ngIf="searchText === '' ||  prod.name.toLowerCase().includes(searchText)"
+          (click)="selectedProduct = prod">
+        </product>
+    </ng-container>
 </div>
